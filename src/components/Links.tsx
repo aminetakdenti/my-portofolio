@@ -1,10 +1,16 @@
+import { motion } from "framer-motion";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 function Links() {
   return (
     <div className=" flex gap-4">
-      <div className="flex gap-2 ">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 0.4 }}
+        className="flex gap-2 "
+      >
         <GitHubIcon />
         <a
           href="http://github.com/aminetakdenti"
@@ -14,8 +20,13 @@ function Links() {
         >
           github
         </a>
-      </div>
-      <div className="flex gap-2 ">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.2, duration: 0.4 }}
+        className="flex gap-2 "
+      >
         <LinkedInIcon />
         <a
           href="http://github.com/aminetakdenti"
@@ -25,7 +36,7 @@ function Links() {
         >
           LinkedIn
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }

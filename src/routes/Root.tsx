@@ -1,12 +1,14 @@
 import Container from "../components/Container";
 import Header from "../components/Header";
+import ProjectsSlide from "../components/ProjectsSlide";
 
 function Root() {
   return (
     <Container>
-      <div className="my-5 flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row">
         <Header />
-        <div className="  w-full  bg-red-200"></div>
+        <ProjectsSlide />
+        {/* <div className="w-2/3 bg-red-950"></div> */}
       </div>
     </Container>
   );
