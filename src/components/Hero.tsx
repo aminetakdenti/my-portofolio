@@ -3,7 +3,7 @@
 
 function Hero() {
   return (
-    <section className="ml-3 flex h-[90vh]  items-center  text-teal-50 md:ml-0">
+    <section className="ml-3 flex h-screen  items-center  text-teal-50 md:ml-0">
       <div className=" space-y-4">
         <h1 className="font-title text-7xl md:text-8xl ">Hey, I'm Amine.</h1>
         <h2 className=" text-3xl md:text-4xl">
