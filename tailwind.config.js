@@ -1,19 +1,46 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
       colors: {
-        text: "#fefcfb",
-        background: "#130807",
-        primary: "#4b391b",
-        secondery: "#143438",
-        accent: "#5680c2",
+        text: "#fff",
+        background: "#10050a",
+        primary: "#722222",
+        secondary: "#280f0f",
+        accent: "#b57536",
       },
       fontFamily: {
         title: "Archivo Black",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

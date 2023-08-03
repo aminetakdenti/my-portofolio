@@ -12,12 +12,12 @@ function Hero() {
             Full Stack Developer
           </span>
         </h2>
-        <button
+        {/* <button
           type="button"
-          className=" relative  rounded-md text-xl font-semibold after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-white after:transition-all after:duration-200 hover:after:w-full"
+          className=" relative rounded-md bg-secondery px-4 py-3 text-xl font-semibold transition-opacity duration-200 hover:opacity-90 "
         >
           Contact me
-        </button>
+        </button> */}
       </div>
     </section>
     // <div className="md:relative md:w-11/12 ">
