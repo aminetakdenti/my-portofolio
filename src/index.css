@@ -1,72 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Azeret+Mono:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Azeret+Mono:wght@400;600;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   background-color: #000;
-  font-family: "Azeret Mono", monospace;
+  font-family: "Azeret Mono";
 }
-
-/* html {
-  --s: 100px; 
-  --c1: #1a1414;
-  --c2: #000000;
-  --c3: #201e1e;
-
-  --_g: var(--c3) 0 120deg, #0000 0;
-  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
-    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
-    conic-gradient(
-      from 60deg at calc(200% / 3),
-      var(--c3) 60deg,
-      var(--c2) 0 120deg,
-      #0000 0
-    ),
-    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
-    linear-gradient(
-      90deg,
-      var(--c1) calc(100% / 6),
-      var(--c2) 0 50%,
-      var(--c1) 0 calc(500% / 6),
-      var(--c2) 0
-    );
-  background-size: calc(1.732 * var(--s)) var(--s);
-  font-family: "Azeret Mono", monospace;
-} */
-
-/* html {
-  --s: 105px; 
-  --c1: #b9b9b9;
-  --c2: #dcdcdc;
-  --c3: #fafafa;
-
-
-  background:
-    conic-gradient(
-        from 75deg,
-        var(--c1) 15deg,
-        var(--c2) 0 30deg,
-        #0000 0 180deg,
-        var(--c2) 0 195deg,
-        var(--c1) 0 210deg,
-        #0000 0
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) / 0.577),
-    conic-gradient(
-      var(--c1) 30deg,
-      var(--c3) 0 75deg,
-      var(--c1) 0 90deg,
-      var(--c2) 0 105deg,
-      var(--c3) 0 150deg,
-      var(--c2) 0 180deg,
-      var(--c3) 0 210deg,
-      var(--c1) 0 256deg,
-      var(--c2) 0 270deg,
-      var(--c1) 0 286deg,
-      var(--c2) 0 331deg,
-      var(--c3) 0
-    );
-  background-size: var(--s) calc(var(--s) / 0.577);
-   0.577=tan(30deg)
-} */

@@ -12,6 +12,7 @@ function Hero() {
             Full Stack Developer
           </span>
         </h2>
+
         {/* <button
           type="button"
           className=" relative rounded-md bg-secondery px-4 py-3 text-xl font-semibold transition-opacity duration-200 hover:opacity-90 "
