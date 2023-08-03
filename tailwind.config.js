@@ -4,11 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        text: "#ebf1ea",
-        background: "#0e120c",
-        primary: "#86a1ac",
-        secondery: "#080609",
-        accent: "#c7b5ad",
+        text: "#fefcfb",
+        background: "#130807",
+        primary: "#4b391b",
+        secondery: "#143438",
+        accent: "#5680c2",
+      },
+      fontFamily: {
+        title: "Archivo Black",
       },
     },
   },

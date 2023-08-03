@@ -8,7 +8,7 @@ function Links() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.4 }}
+        transition={{ delay: 1.3, duration: 0.2 }}
         className="flex gap-2 "
       >
         <GitHubIcon />
@@ -24,7 +24,7 @@ function Links() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.2, duration: 0.4 }}
+        transition={{ delay: 1.4, duration: 0.2 }}
         className="flex gap-2 "
       >
         <LinkedInIcon />

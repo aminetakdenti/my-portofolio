@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Azeret+Mono:wght@400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  --s: 82px; /* control the size */
+  background-color: #0e120c;
+  font-family: "Azeret Mono", monospace;
+}
+
+/* html {
+  --s: 82px; control the size 
   --c1: #1a1414;
   --c2: #000000;
   --c3: #201e1e;
@@ -27,4 +33,4 @@ html {
     );
   background-size: calc(1.732 * var(--s)) var(--s);
   font-family: "Azeret Mono", monospace;
-}
+} */

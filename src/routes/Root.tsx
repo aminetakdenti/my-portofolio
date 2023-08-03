@@ -1,15 +1,14 @@
+import About from "../components/About";
 import Container from "../components/Container";
-import Header from "../components/Header";
-import ProjectsSlide from "../components/ProjectsSlide";
+import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 
 function Root() {
   return (
     <Container>
-      <div className="flex flex-col md:flex-row">
-        <Header />
-        <ProjectsSlide />
-        {/* <div className="w-2/3 bg-red-950"></div> */}
-      </div>
+      <Hero />
+      <About />
+      {/* <Projects /> */}
     </Container>
   );
 }
