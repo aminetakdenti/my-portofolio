@@ -1,7 +1,7 @@
-import About from "../components/About";
-import Container from "../components/Container";
-import Hero from "../components/Hero";
-import Projects from "../components/Projects";
+import About from "@/components/About";
+import Container from "@/components/Container";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
 function Root() {
   return (

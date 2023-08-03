@@ -10,40 +10,34 @@ interface Props {
   demoLink?: string;
 }
 
-function showMore(paragraph: string): string {
-  const words = paragraph.split(" ");
-  if (words.length > 20) {
-    return words.slice(0, 20).join(" ");
-  }
-  return paragraph;
+function showLessDescription(paragraph: string): string {
+  return paragraph.split(" ").slice(0, 20).join(" ");
 }
 
 function toggleText(
   showMoreText: boolean,
   setShowMoreText: any,
-  descrptionLength: number,
+  descrption: string,
 ) {
-  if (descrptionLength <= 20) {
-    console.log(descrptionLength);
-    return;
-  }
+  if (descrption.split(" ").length <= 20) return;
+
+  let text = "show more...";
+  let paragraph = showLessDescription(descrption);
   if (showMoreText) {
-    return (
+    text = "show less";
+    paragraph = descrption;
+  }
+
+  return (
+    <>
+      {paragraph}{" "}
       <span
-        onClick={() => setShowMoreText(false)}
+        onClick={() => setShowMoreText(!showMoreText)}
         className=" relative cursor-pointer text-accent after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-accent after:transition-all after:duration-200 hover:after:w-full"
       >
-        show less
+        {text}
       </span>
-    );
-  }
-  return (
-    <span
-      onClick={() => setShowMoreText(true)}
-      className=" relative cursor-pointer text-accent after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-accent after:transition-all after:duration-200 hover:after:w-full"
-    >
-      show more...
-    </span>
+    </>
   );
 }
 
@@ -79,25 +73,7 @@ function Card({ title, description, image, ghLink, demoLink }: Props) {
           )}
         </div>
         <div className="flex"></div>
-        {showMoreText ? (
-          <p>
-            {description}{" "}
-            {toggleText(
-              showMoreText,
-              setShowMoreText,
-              description.split(" ").length,
-            )}
-          </p>
-        ) : (
-          <p className="">
-            {showMore(description)}{" "}
-            {toggleText(
-              showMoreText,
-              setShowMoreText,
-              description.split(" ").length,
-            )}
-          </p>
-        )}
+        <p>{toggleText(showMoreText, setShowMoreText, description)}</p>
       </div>
     </div>
   );

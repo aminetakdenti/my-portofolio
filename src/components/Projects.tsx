@@ -4,10 +4,11 @@ import projectsData from "../projects.json";
 
 function Projects() {
   return (
-    <NewSection title="Projects">
+    <NewSection title="Projects" reverse>
       <div className=" grid grid-cols-1 gap-10 md:grid-cols-2">
-        {projectsData.map((project) => (
+        {projectsData.map((project, idx) => (
           <Card
+            key={idx}
             title={project.title}
             description={project.description}
             image={project.image}

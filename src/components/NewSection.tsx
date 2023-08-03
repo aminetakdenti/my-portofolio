@@ -1,5 +1,5 @@
 interface Props {
-  title: string;
+  title?: string;
   reverse?: boolean;
   children: React.ReactNode;
 }
@@ -8,8 +8,8 @@ function NewSection({ title, reverse, children }: Props) {
   return (
     <section className="mb-36 space-y-10">
       <div
-        className={`flex items-center gap-8 ${
-          reverse ? "flex-row-reverse" : ""
+        className={`flex items-center  ${reverse ? "flex-row-reverse" : ""} ${
+          title ? "gap-8" : ""
         }`}
       >
         <h2 className="font-title text-6xl ">{title}</h2>

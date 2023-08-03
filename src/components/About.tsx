@@ -35,8 +35,10 @@ function About() {
         <div className="space-y-4 md:w-1/3">
           <h3 className="font-title text-3xl">Skills</h3>
           <div className="flex flex-wrap gap-4">
-            {skills.map((skill) => (
-              <Badge className="bg-primary text-xl font-light">{skill}</Badge>
+            {skills.map((skill, idx) => (
+              <Badge key={idx} className="bg-primary text-xl font-light">
+                {skill}
+              </Badge>
             ))}
           </div>
         </div>
