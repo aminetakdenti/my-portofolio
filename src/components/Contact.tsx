@@ -18,7 +18,7 @@ function Contact() {
           className="relative block cursor-pointer font-title text-xl transition-colors duration-200 hover:text-accent md:text-4xl"
           href="mailto:contact@example.com"
         >
-          contact@example.com
+          takdentiamine@outlook.com
         </a>
       </div>
     </section>
