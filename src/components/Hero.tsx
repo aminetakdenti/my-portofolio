@@ -1,71 +1,42 @@
-// import { motion } from "framer-motion";
-// import Links from "./Links";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
     <section className="ml-3 flex h-screen  items-center  text-teal-50 md:ml-0">
       <div className=" space-y-4">
-        <h1 className="font-title text-7xl md:text-8xl ">Hey, I'm Amine.</h1>
-        <h2 className=" text-3xl md:text-4xl">
-          I'm a{" "}
-          <span className=" bg-gradient-to-r from-primary to-accent bg-clip-text font-bold text-transparent">
-            Full Stack Developer
-          </span>
-        </h2>
-
-        {/* <button
-          type="button"
-          className=" relative rounded-md bg-secondery px-4 py-3 text-xl font-semibold transition-opacity duration-200 hover:opacity-90 "
-        >
-          Contact me
-        </button> */}
+        <div className=" overflow-hidden">
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3 }}
+            className=" font-title text-7xl md:text-8xl "
+          >
+            Hey, I'm Amine.
+          </motion.h1>
+        </div>
+        <div className=" overflow-hidden">
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className=" text-3xl md:text-4xl"
+          >
+            I'm a{" "}
+            <span className=" bg-gradient-to-r from-primary to-accent bg-clip-text font-bold text-transparent">
+              Full Stack Developer
+            </span>
+          </motion.h2>
+        </div>
       </div>
     </section>
-    // <div className="md:relative md:w-11/12 ">
-    //   <div className="flex  md:sticky md:inset-0 md:h-screen md:items-center ">
-    //     <div className="max-w-4xl  space-y-6 text-text">
-    //       <motion.p
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0, duration: 0.2 }}
-    //         className="  md:text-lg lg:text-xl"
-    //       >
-    //         Hi, my name is
-    //       </motion.p>
-    //       <motion.h1
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.3, duration: 0.2 }}
-    //         className="text-2xl font-bold md:text-3xl lg:text-5xl"
-    //       >
-    //         Amine Takdenti
-    //       </motion.h1>
-    //       <motion.h1
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.6, duration: 0.2 }}
-    //         className="text-2xl font-bold text-primary md:text-3xl lg:text-5xl"
-    //       >
-    //         I build things for the web.
-    //       </motion.h1>
-    //       <motion.p
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 1, duration: 0.2 }}
-    //         className="lg:text-lg"
-    //       >
-    //         Hello! 👋 I'm Amine, a full-stack developer with a passion for
-    //         creating exceptional digital experiences. I specialize in React,
-    //         Tailwind CSS, and TypeScript for crafting captivating user
-    //         interfaces. On the back-end, I wield the powers of Express and
-    //         MongoDB to build robust server-side solutions. With React Native, I
-    //         extend my reach to create enchanting cross-platform mobile apps.
-    //       </motion.p>
-    //       {/* <Carousel /> */}
-    //       <Links />
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
