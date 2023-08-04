@@ -12,7 +12,7 @@ function NewSection({ title, reverse, children }: Props) {
           title ? "gap-8" : ""
         }`}
       >
-        <h2 className="font-title text-6xl ">{title}</h2>
+        <h2 className="font-title text-4xl md:text-6xl ">{title}</h2>
         <div className=" h-[1px] w-full bg-gradient-to-r from-accent to-primary"></div>
       </div>
       {children}
