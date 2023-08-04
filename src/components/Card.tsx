@@ -1,6 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import { useState } from "react";
+import Reveal from "./Reveal";
 
 interface Props {
   title: string;
@@ -47,34 +48,38 @@ function Card({ title, description, image, ghLink, demoLink }: Props) {
   return (
     <div className=" space-y-7">
       {image && (
-        <div className="cursor-pointer overflow-hidden rounded bg-gray-800 px-12">
-          <img
-            src={image}
-            className=" h-full w-full translate-y-16 rounded-lg transition-transform duration-200 hover:rotate-3 hover:scale-105"
-            alt={image}
-          />
-        </div>
+        <Reveal>
+          <div className="cursor-pointer overflow-hidden rounded bg-gray-800 px-12">
+            <img
+              src={image}
+              className=" h-full w-full translate-y-16 rounded-lg transition-transform duration-200 hover:rotate-3 hover:scale-105"
+              alt={image}
+            />
+          </div>
+        </Reveal>
       )}
-      <div className=" space-y-3">
-        <div className=" flex items-center gap-3">
-          <h3 className=" w-fit font-title text-xl md:text-2xl">{title}</h3>
-          <div className="  h-[1px] w-full bg-gradient-to-r from-accent to-primary"></div>
-          {ghLink && (
-            <GitHubIcon
-              className="h-8 w-8 cursor-pointer text-white transition-all duration-1000 hover:text-accent"
-              onClick={() => window.open(ghLink, "_blank")}
-            />
-          )}
-          {demoLink && (
-            <LinkIcon
-              className="h-8 w-8 cursor-pointer text-white transition-all duration-1000 hover:text-accent"
-              onClick={() => window.open(demoLink, "_blank")}
-            />
-          )}
+      <Reveal>
+        <div className=" space-y-3">
+          <div className=" flex items-center gap-3">
+            <h3 className=" w-fit font-title text-xl md:text-2xl">{title}</h3>
+            <div className="  h-[1px] w-full bg-gradient-to-r from-accent to-primary"></div>
+            {ghLink && (
+              <GitHubIcon
+                className="h-8 w-8 cursor-pointer text-white transition-all duration-1000 hover:text-accent"
+                onClick={() => window.open(ghLink, "_blank")}
+              />
+            )}
+            {demoLink && (
+              <LinkIcon
+                className="h-8 w-8 cursor-pointer text-white transition-all duration-1000 hover:text-accent"
+                onClick={() => window.open(demoLink, "_blank")}
+              />
+            )}
+          </div>
+          <div className="flex"></div>
+          <p>{toggleText(showMoreText, setShowMoreText, description)}</p>
         </div>
-        <div className="flex"></div>
-        <p>{toggleText(showMoreText, setShowMoreText, description)}</p>
-      </div>
+      </Reveal>
     </div>
   );
 }
